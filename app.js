@@ -14,8 +14,11 @@ const { Router } = require('express');
 
 const database = require(__dirname+"/model/index.js");
 
+let port = process.env.PORT;
+if(port==null || port =="") {
+    port =3000;
+}
 
-const port = process.env.PORT || 3000;
 const currentUserAcc = 346576854975;
 const currentUserName = "Gaurav Shreevastav";
 
