@@ -1,5 +1,12 @@
 const mongoose =require("mongoose");
 
+
+
+// ........................................................User Schema........................................................
+
+
+
+
 const userSchema = new mongoose.Schema({
 
     accNo : Number,
@@ -13,6 +20,12 @@ const userSchema = new mongoose.Schema({
 });
 
 exports.Users = mongoose.model("User",userSchema);
+
+
+
+
+
+// ........................................................Activity Schema........................................................
 
 
 

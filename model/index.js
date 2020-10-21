@@ -1,12 +1,24 @@
+
+// .................................................Dependencies Requirement.................................................
+
+
+
+
 const { query } = require("express");
 const mongoose =require("mongoose");
 const { Activity } = require("./schemas");
 const Schema = require(__dirname+"/schemas.js");
-// const autoIncrement = require("mongoose-auto-increment");
-// mongoose.set('useCreateIndex', true)
 
 const currentUserAcc = 346576854975;
 const currentUserName = "Gaurav Shreevastav";
+
+
+
+
+// .................................................Database Connection.................................................
+
+
+
 
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin-yogesh:Mcuw@3048@spark0.jbkzy.mongodb.net/bankWeb",{ useNewUrlParser: true , useUnifiedTopology: true } );
@@ -20,7 +32,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin-yogesh:Mcuw@304
 
 function getDateTime () {
 
-    let today = new Date();
+    let today = new Date(); 
     let options = {
         year : "numeric",
         day : "numeric",
