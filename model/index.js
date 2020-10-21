@@ -9,7 +9,7 @@ const currentUserAcc = 346576854975;
 const currentUserName = "Gaurav Shreevastav";
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/bankWeb",{ useNewUrlParser: true , useUnifiedTopology: true } );
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin-yogesh:Mcuw@3048@spark0.jbkzy.mongodb.net/bankWeb",{ useNewUrlParser: true , useUnifiedTopology: true } );
 
 
 
