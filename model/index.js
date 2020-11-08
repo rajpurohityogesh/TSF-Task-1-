@@ -8,6 +8,7 @@ const { query } = require("express");
 const mongoose =require("mongoose");
 const { Activity } = require("./schemas");
 const Schema = require(__dirname+"/schemas.js");
+require('dotenv').config();
 
 const currentUserAcc = 346576854975;
 const currentUserName = "Gaurav Shreevastav";
@@ -21,7 +22,7 @@ const currentUserName = "Gaurav Shreevastav";
 
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin-yogesh:Mcuw@3048@spark0.jbkzy.mongodb.net/bankWeb",{ useNewUrlParser: true , useUnifiedTopology: true } );
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin-"+process.env.USER_NAME+":"+process.env.PASSWORD+"@spark0.jbkzy.mongodb.net/bankWeb",{ useNewUrlParser: true , useUnifiedTopology: true } );
 
 
 
